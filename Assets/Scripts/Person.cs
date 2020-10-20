@@ -46,20 +46,6 @@ public class Person : MonoBehaviour
         this.transform.position = this.transform.position - new Vector3(0, 0, stepSize);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Obstacle")   
-        {
-            Debug.Log("You Moron!");
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Obstacle")
-        {
-            Debug.Log("You reached the desk!");
-        }
-    }
+    
 
 }
