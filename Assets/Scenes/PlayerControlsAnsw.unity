@@ -372,7 +372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a22a10fef00a1f46a304eb2f60a670e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObstaclePrefab: {fileID: 0}
+  myObstaclePrefab: {fileID: 2590992163861162677, guid: 432cefdc529ed9b4b927798f1d55455e,
+    type: 3}
   maxRange: 5
   numberOfObstacles: 5
 --- !u!1 &447506306

@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LameKeyboardControls : MonoBehaviour
-{    
-    
+{
+
+    private int numberOfHits = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,5 +41,22 @@ public class LameKeyboardControls : MonoBehaviour
             position.z--;
             this.transform.position = position;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {        
+        if (collision.gameObject.tag == "Desk")
+        {
+            Debug.Log("You Win!");
+
+            Debug.Log("You hit "+ numberOfHits);
+
+            Debug.Log("You missed " + GameObject.FindObjectsOfType<Collectible>().Length);
+        }
+    }
+
+    public void IncreaseHits()
+    {
+        numberOfHits++;
     }
 }
